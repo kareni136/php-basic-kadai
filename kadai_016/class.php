@@ -23,7 +23,7 @@
 
         // show_priceメソッドを定義する
         public function show_price() {
-          return $this->price;
+          echo $this->price;
         }
       }
 
@@ -43,7 +43,7 @@
 
         // show_heightメソッドを定義する
         public function show_height() {
-          return $this->height;
+          echo $this->height;
         }
       }
 
