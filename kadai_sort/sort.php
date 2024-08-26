@@ -9,30 +9,34 @@
 <body>
     <p>
       <?php
-          $nums = [15, 4, 18, 23, 10 ];
-          
-          // 配列を昇順にソート
-          asort($nums);   //　asortが昇順
-          
-          // メッセージを表示
+          // 独自のソート関数を定義
+          function sort_2way(&$array, $order) {
+              if ($order) {
+                  asort($array);  // 昇順にソート
+              } else {
+                  arsort($array); // 降順にソート
+              }
+          }
+
+          // ソートする配列を宣言
+          $nums = [15, 4, 18, 23, 10];
+
+          // 昇順ソートを呼び出し
           echo "昇順にソートします。<br>";
-          
-          // ソートされた配列を表示
-          foreach($nums as $key => $val) {
+          sort_2way($nums, true);
+          foreach($nums as $val) {
               echo $val . "<br>";
           }
 
-          // 配列を降順にソート
-          arsort($nums);  // arsortが降順
-          
-          // メッセージを表示
+          echo "<br>"; // 間にスペースを挿入
+
+          // 降順ソートを呼び出し
           echo "降順にソートします。<br>";
-          
-          // ソートされた配列を表示
-          foreach($nums as $key => $val) {
+          sort_2way($nums, false);
+          foreach($nums as $val) {
               echo $val . "<br>";
           }
-          ?>
+      ?>
     </p>
 </body>
 
