@@ -1,3 +1,5 @@
+<!-- http://localhost/kadai_005/score.php -->
+
 <!DOCTYPE html>
 <html lang="ja">
 
