@@ -23,7 +23,7 @@
 
         // show_priceメソッドを定義する
         public function show_price() {
-          echo $this->price;
+          echo $this->price . "<br>";
         }
       }
 
@@ -43,7 +43,7 @@
 
         // show_heightメソッドを定義する
         public function show_height() {
-          echo $this->height;
+          echo $this->height . "<br>";
         }
       }
 
@@ -62,10 +62,10 @@
       echo "<br>";
 
       // show_priceメソッドを呼び出して、ポテトの値段を表示する
-      echo $food->show_price() . "<br>";
+      $food->show_price();
 
       // show_heightメソッドを呼び出して、犬の身長を表示する
-      echo $animal->show_height() . "<br>";
+      $animal->show_height();
 
       ?>
     </p>
